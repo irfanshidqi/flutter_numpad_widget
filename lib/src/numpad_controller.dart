@@ -120,6 +120,8 @@ class NumpadController with ChangeNotifier {
             if (_rawString.length == maxRawLength &&
                 format != NumpadFormat.CURRENCY) {
               inputValid = true;
+              print("input sudah full NIP");
+
               onInputValidChange?.call(inputValid);
             }
           }
