@@ -75,7 +75,7 @@ class NumpadController with ChangeNotifier {
     switch (format) {
       case NumpadFormat.NONE:
         defaultHintText = 'Enter Number';
-        maxRawLength = 10;
+        maxRawLength = 18;
         break;
       case NumpadFormat.CURRENCY:
         defaultHintText = '\$0.00';
