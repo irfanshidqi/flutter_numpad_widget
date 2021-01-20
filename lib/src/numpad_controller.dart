@@ -122,8 +122,8 @@ class NumpadController with ChangeNotifier {
             if (_rawString.length == maxRawLength &&
                 format != NumpadFormat.CURRENCY) {
               inputValid = true;
-              // print("ini rawstring dalam if == $_rawString");
-              // print("ini input dalam if == $input");
+              print("ini rawstring dalam if == $_rawString");
+              print("ini input dalam if == $input");
 
               onInputValidChange?.call(inputValid);
             }
