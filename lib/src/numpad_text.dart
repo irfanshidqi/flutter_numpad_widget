@@ -89,6 +89,18 @@ class _NumpadTextState extends State<NumpadText>
       displayedText = _controller.formattedString;
       print("ini displayed Text Listener $displayedText");
     });
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text("Selamat NIP Berhasil Dimasukkan"),
+        actions: <Widget>[
+          FlatButton(
+            child: Text("Selesai"),
+            onPressed: () => Navigator.pop(context, false),
+          ),
+        ],
+      ),
+    );
   }
 
   void _handleError() {
