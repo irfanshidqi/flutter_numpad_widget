@@ -73,6 +73,7 @@ class _NumpadTextState extends State<NumpadText>
       ..setErrorResetListener(_handleError);
 
     displayedText = _controller.formattedString;
+    print("ini displayed Text initState $displayedText");
 
     _errorAnimator = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 100))
@@ -86,6 +87,7 @@ class _NumpadTextState extends State<NumpadText>
   void _listener() {
     setState(() {
       displayedText = _controller.formattedString;
+      print("ini displayed Text Listener $displayedText");
     });
   }
 

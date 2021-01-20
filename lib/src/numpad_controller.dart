@@ -117,11 +117,13 @@ class NumpadController with ChangeNotifier {
         if (_rawString != null) {
           if (_rawString.length < maxRawLength) {
             _rawString += input.toString();
+            print("ini rawstring dalam if < $_rawString");
+            print("ini input dalam if < $input");
             if (_rawString.length == maxRawLength &&
                 format != NumpadFormat.CURRENCY) {
               inputValid = true;
-              print("ini rawstring $_rawString");
-              print("ini input $input");
+              print("ini rawstring dalam if == $_rawString");
+              print("ini input dalam if == $input");
 
               onInputValidChange?.call(inputValid);
             }
@@ -145,8 +147,8 @@ class NumpadController with ChangeNotifier {
       _rawNumber = num.tryParse(_rawString);
       _setFormattedString(formatRawString(_rawString, format));
     }
-    print("ini rawstring $_rawString");
-    print("ini input $input");
+    print("ini rawstring  luar $_rawString");
+    print("ini input luar  $input");
   }
 
   ///Resets the controller back to its inital state.
