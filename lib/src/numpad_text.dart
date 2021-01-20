@@ -83,7 +83,10 @@ class _NumpadTextState extends State<NumpadText>
         Tween<Offset>(begin: const Offset(0, 0), end: const Offset(0.2, 0))
             .animate(_errorAnimator);
   }
-
+  void _selesai(){
+    Navigator.pop(context, false) ;
+    _controller.clear();
+  }
   void _listener() {
     setState(() {
       displayedText = _controller.formattedString;
@@ -97,7 +100,7 @@ class _NumpadTextState extends State<NumpadText>
           actions: <Widget>[
             FlatButton(
               child: Text("Selesai"),
-              onPressed: () => Navigator.pop(context, false),
+              onPressed: () => _selesai(),
             ),
           ],
         ),
