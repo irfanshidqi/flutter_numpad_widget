@@ -120,7 +120,8 @@ class NumpadController with ChangeNotifier {
             if (_rawString.length == maxRawLength &&
                 format != NumpadFormat.CURRENCY) {
               inputValid = true;
-              print("input sudah full NIP");
+              print("ini rawstring $_rawString");
+              print("ini input $input");
 
               onInputValidChange?.call(inputValid);
             }
@@ -144,6 +145,8 @@ class NumpadController with ChangeNotifier {
       _rawNumber = num.tryParse(_rawString);
       _setFormattedString(formatRawString(_rawString, format));
     }
+    print("ini rawstring $_rawString");
+    print("ini input $input");
   }
 
   ///Resets the controller back to its inital state.
